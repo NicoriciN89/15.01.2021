@@ -1,0 +1,79 @@
+body {
+    background-color: #223;
+}
+
+.ad-centru {
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.carousel {
+    background-color: #555;
+    height: 700px;
+    width: 700px;
+    perspective: 800px;
+
+}
+
+.carousel .sildes {
+    background-color: #777;
+    height: 600px;
+    width: 600px;
+
+    transform: rotateX(35deg);
+    perspective: 800px;
+
+}
+
+.carousel .sildes div {
+    background-color: #131;
+    height: 600px;
+    width: 400px;
+
+    border: 1px solid black;
+
+
+    
+   transform-origin:  center center -115px;
+     opacity: 0.5;
+}
+
+
+
+
+
+    .carousel .sildes div:nth-child(1)  {
+        transform: rotateX(-42deg) scaleY(1) ;
+        z-index: 1 ;
+        animation: rot-1 10s infinite;
+    }
+
+    .carousel .sildes div:nth-child(2) {
+        transform: rotateX(-42deg)  rotateY(120deg);
+    }
+
+    .carousel .sildes div:nth-child(3) {
+        transform: rotateX(-42deg)  rotateY(240deg);
+    }
+
+
+
+
+    @keyframes rot-1 {
+        from {
+            transform: rotateX(35deg)  rotateY(0deg);
+        }
+        
+    
+        to{
+            transform: rotateX(35deg) rotateZ(360deg) ;
+        }
+
+        
+    }
